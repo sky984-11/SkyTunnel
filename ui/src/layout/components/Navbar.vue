@@ -14,7 +14,7 @@
             <el-dropdown-item>
               <div @click="catToken">查看Token</div>
             </el-dropdown-item>
-          <a target="_blank" href="https://panjiachen.github.io/vue-element-admin-site/#/">
+          <a target="_blank" href="https://github.com/sky984-11/SkyTunnel">
             <el-dropdown-item>使用文档</el-dropdown-item>
           </a>
           <el-dropdown-item divided @click.native="logout">
