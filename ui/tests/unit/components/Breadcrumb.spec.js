@@ -1,3 +1,10 @@
+/*
+ * @Date: 2024-04-28 16:59:26
+ * @LastEditors: liupeng
+ * @LastEditTime: 2024-05-07 13:32:08
+ * @FilePath: /SkyTunnel/ui/tests/unit/components/Breadcrumb.spec.js
+ * @Desc: 
+ */
 import { mount, createLocalVue } from '@vue/test-utils'
 import VueRouter from 'vue-router'
 import ElementUI from 'element-ui'
@@ -12,8 +19,8 @@ const routes = [
     path: '/',
     name: 'home',
     children: [{
-      path: 'dashboard',
-      name: 'dashboard'
+      path: 'service',
+      name: 'service'
     }]
   },
   {
@@ -55,8 +62,8 @@ describe('Breadcrumb.vue', () => {
     localVue,
     router
   })
-  it('dashboard', () => {
-    router.push('/dashboard')
+  it('service', () => {
+    router.push('/service')
     const len = wrapper.findAll('.el-breadcrumb__inner').length
     expect(len).toBe(1)
   })

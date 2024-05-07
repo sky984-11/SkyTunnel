@@ -1,7 +1,7 @@
 /*
  * @Date: 2024-04-28 16:59:26
  * @LastEditors: liupeng
- * @LastEditTime: 2024-04-29 07:52:37
+ * @LastEditTime: 2024-05-07 13:37:37
  * @FilePath: /SkyTunnel/ui/src/router/index.js
  * @Desc: 
  */
@@ -59,12 +59,24 @@ export const constantRoutes = [
   {
     path: '/',
     component: Layout,
-    redirect: '/dashboard',
+    redirect: '/service',
     children: [{
-      path: 'dashboard',
-      name: 'dashboard',
+      path: 'service',
+      name: 'service',
       component: () => import('@/views/homepage/index'),
-      meta: { title: '服务中心', icon: 'dashboard' }
+      meta: { title: '服务中心', icon: 'el-icon-s-cooperation' }
+    }]
+  },
+
+  {
+    path: '/script',
+    component: Layout,
+    redirect: '/script',
+    children: [{
+      path: 'script',
+      name: 'script',
+      component: () => import('@/views/script/index'),
+      meta: { title: '脚本中心', icon: 'el-icon-document' }
     }]
   },
 
