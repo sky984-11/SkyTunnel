@@ -1,7 +1,7 @@
 <!--
  * @Date: 2024-04-28 16:59:26
  * @LastEditors: liupeng
- * @LastEditTime: 2024-05-07 10:51:06
+ * @LastEditTime: 2024-05-07 11:08:13
  * @FilePath: /SkyTunnel/ui/src/views/homepage/index.vue
  * @Desc: 
 -->
@@ -63,16 +63,16 @@
     </el-col>
 
 <el-dialog title="修改" :visible.sync="dialog.edit.show">
-  <el-form :model="dialog.edit.form" :label-width="dialog.edit.formLabelWidth">
-    <el-form-item label="域名">
-      <el-input v-model="dialog.edit.form.domain" autocomplete="off" placeholder="填写域名后优先使用域名进行访问,格式:www.baidu.com"></el-input>
+  <el-form :model="dialog.edit.form" :label-width="dialog.edit.formLabelWidth" :rules="dialog.edit.rules">
+    <el-form-item label="域名" prop="domain">
+      <el-input v-model="dialog.edit.form.domain" autocomplete="off" placeholder="填写域名后优先使用域名进行访问，格式：www.baidu.com"></el-input>
     </el-form-item>
-    <el-form-item label="后缀">
-      <el-input v-model="dialog.edit.form.suffix" autocomplete="off" placeholder="可以给访问地址添加后缀,例如http://192.168.3.1/test,其中/test为后缀部分"></el-input>
+    <el-form-item label="后缀" prop="suffix">
+      <el-input v-model="dialog.edit.form.suffix" autocomplete="off" placeholder="可以给访问地址添加后缀，例如 http://192.168.3.1/test，其中 /test 为后缀部分"></el-input>
     </el-form-item>
   </el-form>
   <div slot="footer" class="dialog-footer">
-    <el-button @click="dialog.edit.show = false">取消</el-button>
+    <el-button @click="editServiceClose">取消</el-button>
     <el-button type="primary" @click="editService">确定</el-button>
   </div>
 </el-dialog>
@@ -92,6 +92,10 @@ export default {
           show: false,
           formLabelWidth:'80px',
           form:{},
+          rules:{
+            // domain:[{ pattern: /^(www\.)?[a-zA-Z0-9]+\.[a-zA-Z]{2,}$/, message: '请输入正确的域名格式' }],
+            // suffix:[{ pattern: /^\/.*/, message: '后缀必须以/开头' }]
+          }
         },
       },
     };
@@ -131,7 +135,6 @@ export default {
     },
 
     editService() {
-      
       edit(this.dialog.edit.form).then(res => {
         if(res.code === 200){
           this.fetchData()
@@ -144,6 +147,10 @@ export default {
     showEditDialog(item){
       this.dialog.edit.form = item
       this.dialog.edit.show = true
+    },
+    editServiceClose(){
+      this.fetchData()
+      this.dialog.edit.show = false
     }
   },
 };
