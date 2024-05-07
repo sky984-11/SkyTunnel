@@ -1,13 +1,13 @@
 <!--
  * @Date: 2024-04-28 16:59:26
  * @LastEditors: liupeng
- * @LastEditTime: 2024-05-07 14:40:57
+ * @LastEditTime: 2024-05-07 17:22:25
  * @FilePath: /SkyTunnel/ui/src/views/homepage/index.vue
  * @Desc: 
 -->
 
 <template>
-  <el-row justify="center" :gutter="20">
+  <el-row justify="center" :gutter="24" style="padding: 10px;">
     <el-col
       :xs="24"
       :sm="12"
@@ -15,7 +15,7 @@
       :lg="7"
       v-for="item in tunnelList"
       :key="item.id"
-      style="margin-top: 10px"
+
     >
       <el-card class="box-card">
         <div slot="header" class="clearfix">
@@ -175,6 +175,8 @@ export default {
 .clearfix:after {
   display: table;
   content: "";
+  
+  
 }
 .clearfix:after {
   clear: both;
@@ -192,5 +194,13 @@ export default {
 .time {
   font-size: 13px;
   color: #999;
+}
+
+.el-card__header{
+ background-color: rgb(42, 177, 177);
+}
+
+.el-card__body{
+  background-color: rgb(180, 184, 184);
 }
 </style>
