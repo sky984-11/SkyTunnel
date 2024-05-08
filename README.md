@@ -16,8 +16,15 @@ SkyTunnel 目前基于 Lucky 实现(后续将会自己开发客户端)。它通�
 ## 如何使用
 
 1. 在家中设备上安装并配置 [lucky](https://www.lucky666.cn/docs/install/)。
-2. 
-3. 
+2. 在luccky中添加穿透规则(如下图)
+![image](https://github.com/sky984-11/SkyTunnel/assets/58068214/fdb48fc2-6aea-4621-9738-f7603c43670e)
+![image](https://github.com/sky984-11/SkyTunnel/assets/58068214/12b9a544-3753-4a72-a590-d924698b302f)
+![image](https://github.com/sky984-11/SkyTunnel/assets/58068214/fe977b8c-f412-4ccb-a025-3350ac056ec3)
+3. skytunnel web端即可同步服务
+![image](https://github.com/sky984-11/SkyTunnel/assets/58068214/13a1beca-db5e-4af3-b40a-4856f040ebf4)
+4. 尝试一下把
+![image](https://github.com/sky984-11/SkyTunnel/assets/58068214/fb0748e5-26ed-42d7-88bc-a92244b1fc6e)
+
 
 ## 私有化部署
 
