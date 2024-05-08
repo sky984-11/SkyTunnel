@@ -1,3 +1,4 @@
+
 # SkyTunnel
 
 SkyTunnel 是一个可以让用户在外地随时访问家中设备和服务的软件。
@@ -14,11 +15,16 @@ SkyTunnel 目前基于 Lucky 实现(后续将会自己开发客户端)。它通�
 
 ## 如何使用
 
-1. 在家中设备上安装并配置 SkyTunnel 客户端。
-2. 在 Web 或 App 端登录 SkyTunnel，获取设备的动态 IP 地址和端口号。
-3. 通过提供的 IP 地址和端口号访问家中设备和服务。
+1. 在家中设备上安装并配置 [lucky](https://www.lucky666.cn/docs/install/)。
+2. 
+3. 
+
+## 私有化部署
 
 ## 技术实现
+
+- 前端：vue + elementui
+- 后端：flask + sqlite3
 
 
 ## 安装要求
