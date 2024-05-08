@@ -1,7 +1,7 @@
 """
 @ Date: 2024-04-26 15:31:44
-@ LastEditors: error: git config user.name & please set dead value or install git
-@ LastEditTime: 2024-04-30 10:59:58
+@ LastEditors: liupeng
+@ LastEditTime: 2024-05-08 08:59:13
 @ FilePath: /SkyTunnel/app/config.py
 @ Desc: 
 """
@@ -14,7 +14,8 @@ class BaseConfig(object):
  
 class ProductionConfig(BaseConfig):
     SQLALCHEMY_DATABASE_URI = 'sqlite://///home/ubuntu/SkyTunnel/app/SkyTunnel.db' 
-    SERVER_NAME="113.31.114.236:5001"
+    # 这里填写自己的服务端地址
+    SERVER_NAME="127.0.0.1:5001"
     DEBUG=True
 
  
