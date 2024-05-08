@@ -1,10 +1,11 @@
 /*
  * @Date: 2024-04-28 16:59:26
- * @LastEditors: liupeng
- * @LastEditTime: 2024-05-07 13:37:37
+ * @LastEditors: sky
+ * @LastEditTime: 2024-05-08 10:12:19
  * @FilePath: /SkyTunnel/ui/src/router/index.js
  * @Desc: 
  */
+
 import Vue from 'vue'
 import Router from 'vue-router'
 

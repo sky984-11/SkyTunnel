@@ -1,11 +1,10 @@
 /*
  * @Date: 2024-04-28 16:59:26
- * @LastEditors: liupeng
- * @LastEditTime: 2024-05-06 14:57:51
+ * @LastEditors: sky
+ * @LastEditTime: 2024-05-08 10:11:55
  * @FilePath: /SkyTunnel/ui/src/api/user.js
  * @Desc: 
  */
-
 
 import request from '@/utils/request'
 

@@ -1,17 +1,11 @@
 """
 @ Date: 2024-04-26 16:54:11
-@ LastEditors: error: git config user.name & please set dead value or install git
-@ LastEditTime: 2024-04-30 15:22:26
+@ LastEditors: sky
+@ LastEditTime: 2024-05-08 10:10:01
 @ FilePath: /SkyTunnel/app/public/user/auth.py
 @ Desc: 
 """
-###########
- # @Description: 登录权限控制
- # @Date: 2022-11-04 16:34:05
- # @LastEditTime: 2023-05-25 11:16:01
- # @FilePath: \BillEase\app\public\user\auth.py
- # @Author: liupeng
-###########
+
 
 import base64
  

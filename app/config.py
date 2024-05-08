@@ -1,10 +1,11 @@
 """
 @ Date: 2024-04-26 15:31:44
-@ LastEditors: liupeng
-@ LastEditTime: 2024-05-08 09:59:11
+@ LastEditors: sky
+@ LastEditTime: 2024-05-08 10:11:11
 @ FilePath: /SkyTunnel/app/config.py
 @ Desc: 
 """
+
 import json
 
 config_data = None

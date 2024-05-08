@@ -1,10 +1,11 @@
 /*
  * @Date: 2024-04-28 16:59:26
- * @LastEditors: liupeng
- * @LastEditTime: 2024-05-07 17:07:11
+ * @LastEditors: sky
+ * @LastEditTime: 2024-05-08 10:13:47
  * @FilePath: /SkyTunnel/ui/src/settings.js
  * @Desc: 
  */
+
 module.exports = {
 
   title: 'SkyTunnel',
