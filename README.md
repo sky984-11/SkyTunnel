@@ -25,6 +25,12 @@ SkyTunnel 目前基于 Lucky 实现(后续将会自己开发客户端)。它通�
 4. 尝试一下把
 ![image](https://github.com/sky984-11/SkyTunnel/assets/58068214/fb0748e5-26ed-42d7-88bc-a92244b1fc6e)
 
+## 安装要求
+
+*以下版本为本人使用并且测试过的版本，其他版本自己也可以尝试下*
+
+- Python3.10+ 
+- Node21.6
 
 ## 私有化部署
 
@@ -65,13 +71,6 @@ npm run dev
 - 前端：vue + elementui
 - 后端：flask + sqlite3
 
-
-## 安装要求
-
-*以下版本为本人使用并且测试过的版本，其他版本自己也可以尝试下*
-
-- Python3.10+ 
-- Node21.6
 
 ## TODO
 
