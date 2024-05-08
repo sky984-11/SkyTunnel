@@ -42,6 +42,23 @@ pip3 install -r requirements.txt
 
 ```
 
+4. 启动后端
+
+```sh
+python3 app/run.py
+```
+
+5. 下载前端依赖
+
+```sh
+npm i
+```
+
+6. 启动前端
+
+```
+npm run dev
+```
 
 ## 技术实现
 
