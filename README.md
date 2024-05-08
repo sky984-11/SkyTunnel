@@ -28,6 +28,21 @@ SkyTunnel 目前基于 Lucky 实现(后续将会自己开发客户端)。它通�
 
 ## 私有化部署
 
+1. 下载源代码
+
+```sh
+git clone https://github.com/sky984-11/SkyTunnel.git
+```
+
+2. 修改Setting.json.tmp -> Setting.json,并根据调整其中的服务端地址和sqlite地址
+3. 下载相关python依赖
+
+```sh
+pip3 install -r requirements.txt
+
+```
+
+
 ## 技术实现
 
 - 前端：vue + elementui
