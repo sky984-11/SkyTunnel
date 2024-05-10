@@ -1,13 +1,13 @@
 <!--
  * @Date: 2024-04-28 16:59:26
  * @LastEditors: sky
- * @LastEditTime: 2024-05-08 10:13:20
+ * @LastEditTime: 2024-05-10 13:28:56
  * @FilePath: /SkyTunnel/ui/src/views/homepage/index.vue
  * @Desc: 
 -->
 
 <template>
-  <el-row justify="center" :gutter="24" style="padding: 10px;">
+  <el-row justify="center" :gutter="24" >
     <el-col
       :xs="24"
       :sm="12"
@@ -180,10 +180,6 @@ export default {
 }
 .clearfix:after {
   clear: both;
-}
-
-.box-card {
-  width: 480px;
 }
 
 .button {
