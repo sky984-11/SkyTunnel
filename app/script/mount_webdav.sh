@@ -2,11 +2,13 @@
 ###
  # @Date: 2024-05-07 13:58:03
  # @LastEditors: sky
- # @LastEditTime: 2024-05-08 10:11:03
+ # @LastEditTime: 2024-05-10 10:48:52
  # @FilePath: /SkyTunnel/app/script/mount_webdav.sh
  # @Desc: 
 ### 
 #!/bin/bash
+
+token=$1
 
 # 检测davfs2是否已安装的函数
 check_davfs2_installation() {
