@@ -62,7 +62,10 @@ module.exports = {
 
     // when there are many pages, it will cause too many meaningless requests
     config.plugins.delete('prefetch')
-
+    config.plugin('define').tap(definitions => {
+      definitions[0]['process.env']['VUE_APP_BASE_API'] = JSON.stringify('http://' + require('../Setting.json').backend_ip + '/api/' + require('../Setting.json').api_version);
+      return definitions;
+  });
     // set svg-sprite-loader
     config.module
       .rule('svg')

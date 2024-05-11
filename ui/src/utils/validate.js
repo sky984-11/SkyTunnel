@@ -1,13 +1,11 @@
 /*
  * @Date: 2024-04-28 16:59:26
- * @LastEditors: liupeng
- * @LastEditTime: 2024-05-06 14:28:56
+ * @LastEditors: sky
+ * @LastEditTime: 2024-05-08 10:13:03
  * @FilePath: /SkyTunnel/ui/src/utils/validate.js
  * @Desc: 
  */
-/**
- * Created by PanJiaChen on 16/11/18.
- */
+
 
 /**
  * @param {string} path

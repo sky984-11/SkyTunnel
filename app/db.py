@@ -1,17 +1,10 @@
 """
 @ Date: 2024-04-26 16:54:11
-@ LastEditors: error: git config user.name & please set dead value or install git
-@ LastEditTime: 2024-05-06 17:45:27
+@ LastEditors: sky
+@ LastEditTime: 2024-05-08 10:11:16
 @ FilePath: /SkyTunnel/app/db.py
 @ Desc: 
 """
-###########
-# @Description: db配置
-# @Date: 2022-10-19 13:03:08
- # @LastEditTime: 2023-12-15 14:55:29
- # @FilePath: \TProxy\app\db.py
-# @Author: liupeng
-###########
 
 
 from run import app

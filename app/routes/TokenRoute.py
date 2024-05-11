@@ -1,10 +1,11 @@
 """
 @ Date: 2024-04-29 16:08:39
-@ LastEditors: error: git config user.name & please set dead value or install git
-@ LastEditTime: 2024-04-30 15:36:52
+@ LastEditors: sky
+@ LastEditTime: 2024-05-08 10:10:38
 @ FilePath: /SkyTunnel/app/routes/TokenRoute.py
 @ Desc: 
 """
+
 from public.user.auth import *
 from flask import request, jsonify,send_file
 from db import User,db

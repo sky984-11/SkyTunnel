@@ -1,10 +1,3 @@
-###########
-# @Description:
-# @Date: 2022-11-05 14:44:39
- # @LastEditTime: 2023-12-15 09:19:11
- # @FilePath: \TProxy\app\routes\UserRoute.py
-# @Author: liupeng
-###########
 from flask import request, jsonify,send_file
 from db import User,db
 from run import app

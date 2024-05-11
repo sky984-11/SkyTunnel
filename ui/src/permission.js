@@ -1,10 +1,11 @@
 /*
  * @Date: 2024-04-28 16:59:26
- * @LastEditors: liupeng
- * @LastEditTime: 2024-04-28 17:35:39
+ * @LastEditors: sky
+ * @LastEditTime: 2024-05-08 10:13:43
  * @FilePath: /SkyTunnel/ui/src/permission.js
  * @Desc: 
  */
+
 import router from './router'
 import store from './store'
 import { Message } from 'element-ui'

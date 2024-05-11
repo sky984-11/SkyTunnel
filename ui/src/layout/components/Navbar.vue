@@ -12,9 +12,9 @@
         </div>
         <el-dropdown-menu slot="dropdown" class="user-dropdown">
             <el-dropdown-item>
-              查看Token
+              <div @click="catToken">查看Token</div>
             </el-dropdown-item>
-          <a target="_blank" href="https://panjiachen.github.io/vue-element-admin-site/#/">
+          <a target="_blank" href="https://github.com/sky984-11/SkyTunnel">
             <el-dropdown-item>使用文档</el-dropdown-item>
           </a>
           <el-dropdown-item divided @click.native="logout">
@@ -54,6 +54,17 @@ export default {
     async logout() {
       await this.$store.dispatch('user/logout')
       this.$router.push(`/login?redirect=${this.$route.fullPath}`)
+    },
+    catToken(){
+              this.$alert(this.token, 'Token', {
+          // confirmButtonText: '确定',
+          // callback: action => {
+          //   this.$message({
+          //     type: 'info',
+          //     message: `action: ${ action }`
+          //   });
+          // }
+        });
     }
   }
 }

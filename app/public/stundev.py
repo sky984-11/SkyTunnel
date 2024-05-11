@@ -1,10 +1,11 @@
 """
 @ Date: 2024-04-30 08:41:51
-@ LastEditors: error: git config user.name & please set dead value or install git
-@ LastEditTime: 2024-04-30 13:38:27
-@ FilePath: /SkyTunnel/stundev.py
+@ LastEditors: sky
+@ LastEditTime: 2024-05-08 10:10:21
+@ FilePath: /SkyTunnel/app/public/stundev.py
 @ Desc: 
 """
+
 # Full Cone NAT（全锥型NAT）：在Full Cone NAT中，内部私有IP地址和端口与外部公共IP地址和端口一一映射，这意味着一旦建立连接，所有来自外部IP地址的数据包都可以通过相同的映射进行传输。
 
 # Restric NAT（限制锥型NAT）：在Restricted Cone NAT中，只有在内部主机首先向外部主机发送数据包后，外部主机才能通过相同的映射向内部主机发送数据包。这个映射是基于目标IP地址和端口的。
