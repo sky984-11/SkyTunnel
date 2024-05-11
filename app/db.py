@@ -1,7 +1,7 @@
 """
 @ Date: 2024-04-26 16:54:11
 @ LastEditors: sky
-@ LastEditTime: 2024-05-08 10:11:16
+@ LastEditTime: 2024-05-11 17:15:53
 @ FilePath: /SkyTunnel/app/db.py
 @ Desc: 
 """
@@ -68,6 +68,7 @@ class Tunner(db.Model):
         souce:数据来源
         suffix:访问地址后缀
         domain:域名
+        https:是否启用https,默认关闭
     """
     __tablename__ = 'tunner'
     __table_args__ = {'extend_existing': True}
@@ -81,6 +82,7 @@ class Tunner(db.Model):
     domain = db.Column(db.String(255), nullable=True)
     ctime = db.Column(db.DateTime, default=datetime.datetime.now)
     otime = db.Column(db.DateTime, default=datetime.datetime.now)
+    https = db.Column(db.Boolean, default=False)
     user_id = db.Column(db.Integer, db.ForeignKey(
         'user.user_id', ondelete='CASCADE'), nullable=False)
 
@@ -95,7 +97,8 @@ class Tunner(db.Model):
             "otime": self.otime.strftime("%Y年%m月%d日 %H:%M:%S"),
             "suffix":self.suffix,
             "source":self.source,
-            "domain":self.domain
+            "domain":self.domain,
+            "https":self.https
         }
 
 

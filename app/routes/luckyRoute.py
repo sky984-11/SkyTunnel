@@ -1,7 +1,7 @@
 """
 @ Date: 2024-04-26 17:36:23
 @ LastEditors: sky
-@ LastEditTime: 2024-05-08 10:10:33
+@ LastEditTime: 2024-05-11 17:18:02
 @ FilePath: /SkyTunnel/app/routes/luckyRoute.py
 @ Desc: 
 """
@@ -280,6 +280,7 @@ def edit_stunrule():
 
             suffix = json_data.get('suffix')
             domain = json_data.get('domain')
+            https = json_data.get('https')
             stun_id = json_data.get('id')
             tunner = Tunner.query.filter_by(id=stun_id).first()
 
@@ -288,6 +289,7 @@ def edit_stunrule():
               
             tunner.suffix = suffix
             tunner.domain = domain
+            tunner.https = https
             db.session.commit()
         except Exception as e:
             db.session.rollback()

@@ -1,7 +1,7 @@
 <!--
  * @Date: 2024-04-28 16:59:26
  * @LastEditors: sky
- * @LastEditTime: 2024-05-10 13:28:56
+ * @LastEditTime: 2024-05-11 17:11:42
  * @FilePath: /SkyTunnel/ui/src/views/homepage/index.vue
  * @Desc: 
 -->
@@ -49,6 +49,16 @@
         </div>
         <div class="text item">
           {{ "域名： " + item.domain }}
+        </div>
+          <div class="text item">
+             <el-switch
+    v-model="item.https"
+    class="ml-2"
+    inline-prompt
+    style="--el-switch-on-color: #13ce66; --el-switch-off-color: #ff4949"
+    active-text="启用https"
+    inactive-text="关闭https"
+  />
         </div>
         <div class="text item">
           {{ "地址后缀： " + item.suffix }}
