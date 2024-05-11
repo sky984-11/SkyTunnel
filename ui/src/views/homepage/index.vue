@@ -1,13 +1,13 @@
 <!--
  * @Date: 2024-04-28 16:59:26
  * @LastEditors: sky
- * @LastEditTime: 2024-05-11 17:23:31
+ * @LastEditTime: 2024-05-11 17:47:22
  * @FilePath: /SkyTunnel/ui/src/views/homepage/index.vue
  * @Desc: 
 -->
 
 <template>
-  <el-row justify="center" :gutter="24" >
+  <el-row justify="center" :gutter="24">
     <el-col
       :xs="24"
       :sm="12"
@@ -15,7 +15,6 @@
       :lg="7"
       v-for="item in tunnelList"
       :key="item.id"
-
     >
       <el-card class="box-card">
         <div slot="header" class="clearfix">
@@ -45,20 +44,29 @@
           >
         </div>
         <div class="text item">
-          {{ "访问地址： " + "http://" + item.ip + ":" + item.port }}
+          {{
+            "访问地址： " +
+            (item.https ? "https://" : "http://") +
+            item.ip +
+            ":" +
+            item.port
+          }}
         </div>
         <div class="text item">
-          {{ "域名： " + item.domain }} 
+          {{ "域名： " + item.domain }}
         </div>
-          <div class="text item">
-             <el-switch
-    v-model="item.https"
-    class="ml-2"
-    inline-prompt
-    style="--el-switch-on-color: #13ce66; --el-switch-off-color: #ff4949"
-    active-text="启用https"
-    inactive-text="关闭https"
-  />
+        <div class="text item">
+          <el-switch
+            v-model="item.https"
+            @change="httpsChange(item)"
+            inline-prompt
+            style="
+              --el-switch-on-color: #13ce66;
+              --el-switch-off-color: #ff4949;
+            "
+            active-text="启用https"
+            inactive-text="关闭https"
+          />
         </div>
         <div class="text item">
           {{ "地址后缀： " + item.suffix }}
@@ -134,8 +142,9 @@ export default {
     },
     toService(item) {
       const domain = item.domain || item.ip;
-      const suffix = item.suffix ? item.suffix : "";
-      const link = `http://${domain}:${item.port}${suffix}`;
+      const suffix = item.suffix || "";
+      const protocol = item.https ? "https://" : "http://";
+      const link = `${protocol}${domain}:${item.port}${suffix}`;
       window.open(link, "_blank");
     },
 
@@ -167,6 +176,14 @@ export default {
       this.fetchData();
       this.dialog.edit.show = false;
     },
+
+    httpsChange(item) {
+      edit(item).then((res) => {
+        if (res.code === 200) {
+          this.fetchData();
+        }
+      });
+    },
   },
 };
 </script>
@@ -185,8 +202,6 @@ export default {
 .clearfix:after {
   display: table;
   content: "";
-  
-  
 }
 .clearfix:after {
   clear: both;
@@ -202,11 +217,11 @@ export default {
   color: #999;
 }
 
-.el-card__header{
- background-color: rgb(42, 177, 177);
+.el-card__header {
+  background-color: rgb(42, 177, 177);
 }
 
-.el-card__body{
+.el-card__body {
   background-color: rgb(180, 184, 184);
 }
 </style>
