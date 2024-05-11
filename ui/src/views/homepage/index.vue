@@ -1,7 +1,7 @@
 <!--
  * @Date: 2024-04-28 16:59:26
  * @LastEditors: sky
- * @LastEditTime: 2024-05-11 17:11:42
+ * @LastEditTime: 2024-05-11 17:23:31
  * @FilePath: /SkyTunnel/ui/src/views/homepage/index.vue
  * @Desc: 
 -->
@@ -48,7 +48,7 @@
           {{ "访问地址： " + "http://" + item.ip + ":" + item.port }}
         </div>
         <div class="text item">
-          {{ "域名： " + item.domain }}
+          {{ "域名： " + item.domain }} 
         </div>
           <div class="text item">
              <el-switch
