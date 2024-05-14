@@ -1,13 +1,10 @@
 
 # SkyTunnel
 
-SkyTunnel 是一个能让你使用公网访问家中设备的程序。
+SkyTunnel 是一个能让你使用家庭公网访问家中设备的程序。
 Demo环境：
     113.31.114.236:9529/#/service
 
-## 简介
-
-SkyTunnel 目前基于 Lucky 实现(后续将会自己开发客户端)。它通过 Lucky 的 Webhook 将设备的 IP 地址和端口号变化信息发送到中继器中，然后中继器通过 API 接口将 IP 地址和端口号提供给 Web 或 App 端用户。
 
 ## 功能特点
 
